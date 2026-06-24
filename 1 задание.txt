@@ -21,7 +21,7 @@ GO
 CREATE TABLE Products (
     ProductId INT IDENTITY(1,1) PRIMARY KEY,
     Article NVARCHAR(50) NOT NULL UNIQUE,
-    Name NVARCHAR(300) NOT NULL,
+    [Name] NVARCHAR(300) NOT NULL,
     Unit NVARCHAR(20) DEFAULT 'шт.',
     Price DECIMAL(10,2) NOT NULL,
     Author NVARCHAR(200),
@@ -67,7 +67,7 @@ CREATE TABLE OrderItems (
 GO
 
 -- ИМПОРТ ТОВАРОВ из Tovar.xlsx
-INSERT INTO Products (Article, Name, Price, Author, Manufacturer, Category, Discount, StockQuantity, Description, ImagePath) VALUES
+INSERT INTO Products (Article, [Name], Price, Author, Manufacturer, Category, Discount, StockQuantity, [Description], ImagePath) VALUES
 ('А112Т4', 'Прокляты и убиты', 585.00, 'Виктор Астафьев', 'Яуза', 'Художественная литература', 25, 6, 'Роман-эпопею "Прокляты и убиты" Виктора Астафьева...', '1.jpg'),
 ('G843H5', 'Тайны и загадки отца Брауна', 193.00, 'Гилберт Кит Честертон', 'Яуза', 'Художественная литература', 30, 9, 'Гилберт Кит Честертон — признанный классик...', '2.jpg'),
 ('D325D4', 'Девайс', 1599.00, 'Кирилл Каланджи', 'Т8 Издательские технологии', 'Художественная литература', 5, 12, 'Молодой фрилансер Захар Скаро...', '3.jpg'),
@@ -91,7 +91,7 @@ INSERT INTO Products (Article, Name, Price, Author, Manufacturer, Category, Disc
 GO
 
 -- ИМПОРТ ПОЛЬЗОВАТЕЛЕЙ
-INSERT INTO Users (Role, FullName, Login, Password) VALUES
+INSERT INTO Users ([Role], FullName, [Login], [Password]) VALUES
 ('Администратор', 'Никифорова Анна Семеновна', '94d5ous@gmail.com', 'uzWC67'),
 ('Администратор', 'Стелина Евгения Петровна', 'uth4iz@mail.com', '2L6KZG'),
 ('Администратор', 'Михайлюк Анна Вярославовна', '5d4zbu@tutanota.com', 'rwVDh9'),
