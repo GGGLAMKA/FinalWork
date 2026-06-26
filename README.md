@@ -1,7 +1,5 @@
 # ShoppingTerminal
 
-Проект разработан на платформе .NET.
-
 ## Состав
 
 - ShoppingTerminal.WPF — клиентское приложение
